@@ -26,11 +26,11 @@ def check_password():
     """Returns True if the user has entered the correct password."""
 
     def password_entered():
-        # Compare entered password against the secret. On match, remove the
-        # plaintext from session state immediately.
+        # Compare entered password against the secret. On match, blank the
+        # plaintext out of session state immediately.
         if st.session_state.get("password") == st.secrets.get("app_password"):
             st.session_state["password_correct"] = True
-            del st.session_state["password"]
+            st.session_state["password"] = ""  # scrub the plaintext
         else:
             st.session_state["password_correct"] = False
 

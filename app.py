@@ -1098,29 +1098,25 @@ elif page == "✍️ Blog":
 # PAGE: VIDEO & CONTACT
 # =============================================================================
 elif page == "🎥 Video & Contact":
-    import os
-
     st.title("Video Presentation")
     st.markdown(
         "A 1–2 minute summary of the program and the portfolio, aimed at a "
         "non-technical audience."
     )
 
-    # --- Local video file ---
-    # Drop your video in the same folder as app.py and name it portfolio_video.mp4
-    # (or change VIDEO_PATH below to match your filename)
-    VIDEO_PATH = "portfolio_video.mp4"
+    # --- YouTube video ---
+    # Paste your unlisted YouTube URL below.
+    VIDEO_URL = "https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
 
-    if os.path.exists(VIDEO_PATH):
-        # Center the video and cap its width so it doesn't stretch full-page
+    if "YOUR_VIDEO_ID" in VIDEO_URL:
+        st.warning(
+            "📹 **Video not set yet.** Open `app.py` and replace the `VIDEO_URL` "
+            "placeholder near the bottom of the file with your unlisted YouTube URL."
+        )
+    else:
         left, mid, right = st.columns([1, 3, 1])
         with mid:
-            st.video(VIDEO_PATH)
-    else:
-        st.warning(
-            f"📹 **Video file not found.** Place your video file named "
-            f"`{VIDEO_PATH}` in the same folder as `app.py`, then refresh the page."
-        )
+            st.video(VIDEO_URL)
 
     st.divider()
     st.header("Get in Touch")

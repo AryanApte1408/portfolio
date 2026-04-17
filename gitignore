@@ -1,0 +1,21 @@
+# Streamlit secrets — NEVER commit these
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Large video files — optional, delete this line if you want to commit via LFS
+# *.mp4

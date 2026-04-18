@@ -1106,7 +1106,7 @@ elif page == "🎥 Video & Contact":
 
     # --- YouTube video ---
     # Paste your unlisted YouTube URL below.
-    VIDEO_URL = "https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
+    VIDEO_URL = "https://www.youtube.com/watch?v=np7N-7rV_gc"
 
     if "YOUR_VIDEO_ID" in VIDEO_URL:
         st.warning(

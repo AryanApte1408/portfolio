@@ -587,7 +587,7 @@ if page == "🏠 Overview":
     c1.metric("Featured Projects", len(PROJECTS))
     c2.metric("Industry Roles", len(EXPERIENCE))
     c3.metric("Learning Outcomes", "6 / 6")
-    c4.metric("Track", "Data Science")
+    c4.metric("Track", "AI + Language")
 
     # Featured projects — two columns
     st.markdown('<div class="section-header"><h2>Featured Projects</h2></div>',
@@ -733,35 +733,42 @@ elif page == "💼 Experience":
 elif page == "🛤️ Track & Reflection":
     st.title("Track Selection & Synthesis")
 
-    st.markdown('<div class="section-header"><h2>Selected Track: Data Science</h2></div>',
+    st.markdown('<div class="section-header"><h2>Selected Track: Artificial Intelligence + Language Analytics (Cross-Track)</h2></div>',
                 unsafe_allow_html=True)
     st.markdown(
         """
-        I selected the **Data Science track** because my work sits squarely in the modeling
-        and AI-systems side of the field rather than pure business analytics. Across my
-        coursework and my roles at American Express, the Open Source Program Office, and
-        NEXIS Lab, the problems I keep gravitating toward involve building models — LSTMs
-        for time series, transformers for text, LLMs for generation, autoencoders for
-        anomaly detection — and engineering the pipelines around them.
+        I selected a **cross-track combination of Artificial Intelligence and
+        Language Analytics** because my work sits at the intersection of the two.
+        The AI track anchors the modeling side — deep learning, responsible AI,
+        agentic systems — while the Language Analytics track anchors the text side —
+        NLP, text mining, working with unstructured language data at scale.
+        Together they describe the field I actually work in: applied LLM and
+        text-modeling systems.
 
-        **What the track taught me, at a high level:**
+        **What the cross-track taught me, at a high level:**
 
-        - **Depth over breadth in modeling.** Courses like **IST 707 Applied
-          Machine Learning** and **IST 691 Deep Learning in Practice** pushed me
-          past "fit a model and look at accuracy" into walk-forward backtesting,
-          covariance shrinkage, fine-tuning with QLoRA, and drift detection via
-          Cohen's h / MMD² / KL divergence — techniques that matter once the
-          stakes are real.
-        - **Data engineering is half the work.** My insider-trading project
-          (IST 687), the OSPO OCR pipeline, and the AmEx drift framework
-          (IST 974) all spent more time on ingestion, alignment, and cleaning
-          than on modeling. **IST 659 Data Admin & DB Management** made that
-          obvious early.
-        - **Ethics as a first-class concern.** **IST 692 Responsible AI** and
-          **IST 688 Building Human-Centered AI Apps** trained me to write
-          explicit ethics sections into the ESG project, the insider-trading
-          backtest, and the AmEx drift work — not as bolt-ons but as part of
-          the analysis.
+        - **Modern NLP end-to-end.** IST 664 Natural Language Processing and
+          IST 736 Text Mining gave me the Language Analytics foundation —
+          tokenization, embeddings, classification, topic modeling, and the
+          statistical tests (MMD², cluster χ²) that later powered the text-drift
+          module of my AmEx internship. Without that base, the transformer-era
+          work in the AI track would have felt like black-box tool use.
+        - **Deep learning in practice, not just theory.** IST 691 Deep Learning
+          in Practice and IST 688 Building Human-Centered AI Apps moved me from
+          "fit a model and look at accuracy" into walk-forward backtesting,
+          QLoRA fine-tuning, and LLM system design. The AI track is where the
+          Job Application MCP and the on-device LoRA toolkit became feasible as
+          individual projects.
+        - **Ethics as a first-class concern.** IST 692 Responsible AI — a core
+          AI-track course — trained me to write explicit ethics sections into
+          every project rather than treating them as disclaimers. The ESG,
+          insider-trading, and AmEx drift writeups all include named methodology
+          limits and ethical caveats because the track made that a default.
+        - **Data engineering stays central.** Even in a language-heavy track,
+          my insider-trading project, OSPO OCR pipeline, and AmEx drift
+          framework spent more time on ingestion, alignment, and cleaning than
+          on modeling. The program's emphasis on the full data-science lifecycle
+          made that split obvious early.
         """
     )
 
@@ -1106,7 +1113,7 @@ elif page == "🎥 Video & Contact":
 
     # --- YouTube video ---
     # Paste your unlisted YouTube URL below.
-    VIDEO_URL = "https://www.youtube.com/watch?v=np7N-7rV_gc"
+    VIDEO_URL = "https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
 
     if "YOUR_VIDEO_ID" in VIDEO_URL:
         st.warning(
